@@ -9,232 +9,162 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+  name: "Ar Razy Fathan Rabbani",
+  initials: "AFR",
+  location: "Yogyakarta, Indonesia 🇮🇩",
+  locationLink: "https://www.google.com/maps/place/Yogyakarta",
+  about: "Android Engineer",
   summary: (
     <>
-      Frontend-focused Full Stack Engineer specializing in high-performance
-      React applications, scalable Node.js services, and real-time collaboration
-      systems. Experienced in technical architecture design and remote team
-      leadership.
+      Android Engineer with 2 years of experience in developing mobile
+      applications. Open to learn new things and up to any challenges. Able to
+      work individually and team work. Proficient in various modern technologies
+      of android development with Kotlin/Java.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "https://i.ibb.co.com/BKPMMyjh/profil-small.jpg",
+  personalWebsiteUrl: "https://arrazyfathan.com",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "arrazy.rabbani266@gmail.com",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/arrazyfahan",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/arrazyfathan/",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://x.com/arrazyfathann",
         icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Universitas Islam Indonesia",
+      degree: "Bachelor's Degree in Computer Science",
+      start: "2017",
+      end: "2021 (GPA: 3.68)",
     },
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
+      company: "Gamatechno Indonesia",
+      link: "https://www.gamatechno.com/",
+      badges: ["Hybrid", "Android", "Kotlin", "Java"],
+      title: "Android Engineer",
+      logo: ConsultlyLogo,
+      start: "2022",
+      end: null,
+      description: (
+        <>
+          I work as an Android Engineer in the Digital Solutions division. I am
+          involved in the development of various applications, which range
+          from product-based to project-based. My primary focus is on
+          developing project-based applications for government entities,
+          with the aim of enhancing their productivity.
+          <ul className="list-disc pl-4 pt-6">
+            <li>
+              Collaborated with a team of developers to design
+              and implement Android applications, ensuring
+              optimal performance and user experience
+            </li>
+            <li className="pt-2">
+              Developed and maintained code for new features,
+              enhancements, and bug fixes in alignment with
+              project requirements
+            </li>
+            <li className="pt-2">
+              Worked closely with UX/UI designers to implement
+              visually appealing and intuitive interfaces
+            </li>
+            <li className="pt-2">
+              Stayed current with the latest Android development
+              trends and technologies, integrating them into
+              projects for continuous improvement.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      company: "Freelance",
+      link: "",
+      badges: ["Remote", "Android"],
+      title: "Android Developer",
       logo: ConsultlyLogo,
       start: "2024",
       end: null,
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
-          <ul className="list-inside list-disc">
+          As a freelance Android Developer, I work independently to design, develop, and maintain Android applications for various clients. I focus on building high-quality, user-friendly, and scalable mobile solutions tailored to clients needs.
+          <ul className="list-disc pl-4 pt-6">
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
+              Designed and implemented Android applications, ensuring optimal performance and smooth user experience.
             </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
+            <li className="pt-2">
+              Developed and maintained features, enhancements, and bug fixes based on project requirements.
             </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
+            <li className="pt-2">
+              Worked closely with clients to understand their needs and translate them into functional mobile applications.
             </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
+            <li className="pt-2">
+              Stayed up to date with the latest Android development trends and best practices to deliver cutting-edge solutions.
             </li>
           </ul>
         </>
       ),
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
     },
   ],
-  skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
-  ],
+  skills: ["Android Native", "Jetpack Compose", "KMP", "Flutter", "Android Jetpack", "XML", "Android SDK", "System Architecture", "Firebase", "Gradle", "Coroutines"],
+  programmingLanguages: ["Kotlin", "Java", "Dart", "JavaScript"],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
+      title: "JakLingko App",
+      techStack: ["Android Native", "Kotlin & Java", "Firebase", "NFC", "Room Database", "Google Maps SDK", "Coroutines", "MVVM"],
       description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
+        "Jak Lingko is a public transport integration program designed to integrate payment and physical connection between transport modes in Jakarta.",
       logo: MonitoLogo,
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "JakLingko",
+        href: "https://play.google.com/store/apps/details?id=com.jaklingkoindonesia.app&pcampaignid=web_share",
       },
     },
     {
-      title: "Consultly",
+      title: "Kosmo Kominfo",
       techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
+        "Android Native",
+        "Kotlin",
+        "RxJava",
+        "MVP",
+        "Firebase",
+        "MLKit"
       ],
       description:
-        "Platform for online consultations with real-time video meetings and scheduling",
+        "Kosmo Kominfo is a productivity companion app designed for\n" +
+        "the members of the Ministry of Communication and\n" +
+        "Informatics.",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "Kosmo Komdigi",
+        href: "https://play.google.com/store/apps/details?id=com.kosmokominfo&pcampaignid=web_share",
       },
     },
     {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
+      title: "Notes Agent ( Voice to Text )",
+      techStack: ["Android Native", "Kotlin", "Firebase", "MVI"],
       description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
+        "This app assists agents in creating notes using voice-to-text technology, allowing\n" +
+        "them to transcribe their thoughts either in real time or from recordings.",
       logo: MonitoLogo,
       link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
+        label: "Notes Agent",
+        href: "",
       },
     },
   ],
