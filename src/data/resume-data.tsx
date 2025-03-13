@@ -26,6 +26,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://arrazyfathan.com",
   contact: {
     email: "arrazy.rabbani266@gmail.com",
+    tel: null,
     social: [
       {
         name: "GitHub",
