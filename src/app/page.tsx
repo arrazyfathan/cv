@@ -8,10 +8,20 @@ import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
 import { Header } from "./components/Header";
 import { ProgrammingLanguages } from "@/app/components/ProgrammingLanguage";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
   description: RESUME_DATA.about,
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+  },
   openGraph: {
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
@@ -32,6 +42,14 @@ export const metadata: Metadata = {
     description: RESUME_DATA.about,
     images: ["https://i.ibb.co.com/NNWcLxd/meta-img-2.png"],
   },
+  keywords: [
+    "arrazy",
+    "arrazyfathan",
+    "ar razy",
+    "ar razy fathan rabbani",
+    "fathan",
+    " ar razy fathan",
+  ],
 };
 
 /**
@@ -58,38 +76,55 @@ function getCommandMenuLinks() {
 
 export default function ResumePage() {
   return (
-    <main
-      className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
-      id="main-content"
-    >
-      <div className="sr-only">
-        <h1>{RESUME_DATA.name}&apos;s Resume</h1>
-      </div>
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-RJ4100DQ7M"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RJ4100DQ7M');
+        `}
+      </Script>
 
-      <section
-        className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
-        aria-label="Resume Content"
+      <main
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        id="main-content"
       >
-        <Header />
-
-        <div className="space-y-8 print:space-y-4">
-          <Summary summary={RESUME_DATA.summary} />
-
-          <WorkExperience work={RESUME_DATA.work} />
-
-          <Education education={RESUME_DATA.education} />
-
-          <ProgrammingLanguages programmingLanguage={RESUME_DATA.programmingLanguages} />
-
-          <Skills skills={RESUME_DATA.skills} />
-
-          <Projects projects={RESUME_DATA.projects} />
+        <div className="sr-only">
+          <h1>{RESUME_DATA.name}&apos;s Resume</h1>
         </div>
-      </section>
 
-      <nav className="print:hidden" aria-label="Quick navigation">
-        <CommandMenu links={getCommandMenuLinks()} />
-      </nav>
-    </main>
+        <section
+          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+          aria-label="Resume Content"
+        >
+          <Header />
+
+          <div className="space-y-8 print:space-y-4">
+            <Summary summary={RESUME_DATA.summary} />
+
+            <WorkExperience work={RESUME_DATA.work} />
+
+            <Education education={RESUME_DATA.education} />
+
+            <ProgrammingLanguages
+              programmingLanguage={RESUME_DATA.programmingLanguages}
+            />
+
+            <Skills skills={RESUME_DATA.skills} />
+
+            <Projects projects={RESUME_DATA.projects} />
+          </div>
+        </section>
+
+        <nav className="print:hidden" aria-label="Quick navigation">
+          <CommandMenu links={getCommandMenuLinks()} />
+        </nav>
+      </main>
+    </>
   );
 }
