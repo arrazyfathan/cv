@@ -23,7 +23,7 @@ export const RESUME_DATA = {
     </>
   ),
   avatarUrl: "https://i.ibb.co.com/BKPMMyjh/profil-small.jpg",
-  personalWebsiteUrl: "https://arrazyfathan.com",
+  personalWebsiteUrl: null,
   contact: {
     email: "arrazy.rabbani266@gmail.com",
     tel: null,
