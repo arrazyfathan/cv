@@ -55,7 +55,7 @@ export function Skills({ skills, className }: SkillsProps) {
           <SkillsList skills={skills.mobile} />
         </div>
         <div>
-          <h3 className="text-sm font-normal mb-2">Toolbox :</h3>
+          <h3 className="text-sm font-normal mb-2">Tools :</h3>
           <SkillsList skills={skills.toolbox} />
         </div>
       </div>
