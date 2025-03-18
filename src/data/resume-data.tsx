@@ -58,7 +58,7 @@ export const RESUME_DATA = {
       company: "Gamatechno Indonesia",
       link: "https://www.gamatechno.com/",
       badges: ["Hybrid", "Android", "Kotlin", "Java"],
-      title: "Android Engineer",
+      title: "Mobile Engineer",
       logo: ConsultlyLogo,
       start: "2022",
       end: null,
@@ -168,6 +168,39 @@ export const RESUME_DATA = {
       logo: MonitoLogo,
       link: {
         label: "Notes Agent",
+        href: "",
+      },
+    },
+    {
+      title: "Lerun",
+      techStack: ["Android Native", "Kotlin", "Firebase", "MVVM", "Room Database", "Coroutines", "Google Maps", "Dagger Hilt"],
+      description:
+        "Lerun is a running tracking application based on modern Android tech-stacks and MVVM architecture.",
+      logo: MonitoLogo,
+      link: {
+        label: "Lerun",
+        href: "https://github.com/arrazyfathan/Lerun",
+      },
+    },
+    {
+      title: "BeVoucher - Berau Coal HSE Automation",
+      techStack: ["Android Native", "Java", "Firebase", "MVP", "Room Database"],
+      description:
+        "Implemented a voucher system that enhances user experience by offering additional benefits and rewards, driving user engagement and loyalty within the app.",
+      logo: MonitoLogo,
+      link: {
+        label: "BeVoucher",
+        href: "",
+      },
+    },
+    {
+      title: "Panic Button",
+      techStack: ["Android Native", "Kotlin", "Firebase", "MVI", "Google Maps", "Coroutines"],
+      description:
+        "This app enables agents to quickly send emergency alerts or SOS messages, along with their current location, text, and video. It is designed to provide a swift and reliable way to communicate urgent situations, ensuring that help can be dispatched promptly.",
+      logo: MonitoLogo,
+      link: {
+        label: "Panic Button",
         href: "",
       },
     },
