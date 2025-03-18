@@ -3,10 +3,10 @@ import { Section } from "@/components/ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
 
-type Skills = readonly string[];
+type SkillsData = typeof RESUME_DATA.skills;
 
 interface SkillsListProps {
-  skills: Skills;
+  skills: readonly string[];
   className?: string;
 }
 
@@ -31,7 +31,7 @@ function SkillsList({ skills, className }: SkillsListProps) {
 }
 
 interface SkillsProps {
-  skills: Skills;
+  skills: SkillsData;
   className?: string;
 }
 
@@ -45,7 +45,20 @@ export function Skills({ skills, className }: SkillsProps) {
       <h2 className="text-xl font-bold" id="skills-section">
         Skills
       </h2>
-      <SkillsList skills={skills} aria-labelledby="skills-section" />
+      <div className="space-y-4">
+        <div>
+          <h3 className="text-sm font-normal mb-2">Programming Languages :</h3>
+          <SkillsList skills={skills.programmingLanguages} />
+        </div>
+        <div>
+          <h3 className="text-sm font-normal mb-2">Mobile :</h3>
+          <SkillsList skills={skills.mobile} />
+        </div>
+        <div>
+          <h3 className="text-sm font-normal mb-2">Toolbox :</h3>
+          <SkillsList skills={skills.toolbox} />
+        </div>
+      </div>
     </Section>
   );
 }

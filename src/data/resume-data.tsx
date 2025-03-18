@@ -122,8 +122,11 @@ export const RESUME_DATA = {
       ),
     },
   ],
-  skills: ["Android Native", "Jetpack Compose", "KMP", "Flutter", "Android Jetpack", "XML", "Android SDK", "System Architecture", "Firebase", "Gradle", "Coroutines"],
-  programmingLanguages: ["Kotlin", "Java", "Dart", "JavaScript"],
+  skills: {
+    programmingLanguages: ["Kotlin", "Java", "Dart", "JavaScript"],
+    mobile: ["Android Native", "Jetpack Compose", "KMP", "Flutter", "Android Jetpack", "XML", "CI/CD", "MVVM", "MVI", "MVP", "Clean Architecture", "Coroutines"],
+    toolbox: ["Android Studio", "Firebase", "Gradle", "Git", "Android SDK", "Jenkins", "Gitlab CI/CD", "VS Code", "Intellij IDEA", "Postman", "Figma", "Xcode"]
+  },
   projects: [
     {
       title: "JakLingko App",

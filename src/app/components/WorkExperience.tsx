@@ -115,7 +115,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
         </div>
         <div className="mt-2">
           <BadgeList
-            className="-mx-2 flex-wrap gap-1 sm:hidden"
+            className="flex-wrap gap-1 sm:hidden"
             badges={badges}
           />
         </div>

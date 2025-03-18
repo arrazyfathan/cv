@@ -7,7 +7,6 @@ import { Education } from "./components/Education";
 import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
 import { Header } from "./components/Header";
-import { ProgrammingLanguages } from "@/app/components/ProgrammingLanguage";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -110,10 +109,6 @@ export default function ResumePage() {
             <WorkExperience work={RESUME_DATA.work} />
 
             <Education education={RESUME_DATA.education} />
-
-            <ProgrammingLanguages
-              programmingLanguage={RESUME_DATA.programmingLanguages}
-            />
 
             <Skills skills={RESUME_DATA.skills} />
 
