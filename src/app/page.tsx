@@ -10,8 +10,14 @@ import { Header } from "./components/Header";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arrazyfathan.com"),
   title: `${RESUME_DATA.name} - Resume`,
   description: RESUME_DATA.description,
+  verification: {
+    other: {
+      "msvalidate.01": "EBE6268A6D5FBD80B417C927D6DDA565",
+    },
+  },
   icons: {
     icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
     apple: [{ url: "/apple-icon.png" }],
