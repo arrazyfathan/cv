@@ -14,6 +14,8 @@ export const RESUME_DATA = {
   location: "Yogyakarta, Indonesia 🇮🇩",
   locationLink: "https://www.google.com/maps/place/Yogyakarta",
   about: "Android Engineer",
+  description:
+    "Ar Razy Fathan Rabbani – Android Engineer based in Yogyakarta, Indonesia 🇮🇩. With 2 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
   summary: (
     <>
       Android Engineer with 2 years of experience in developing mobile
@@ -65,29 +67,28 @@ export const RESUME_DATA = {
       description: (
         <>
           I work as an Android Engineer in the Digital Solutions division. I am
-          involved in the development of various applications, which range
-          from product-based to project-based. My primary focus is on
-          developing project-based applications for government entities,
-          with the aim of enhancing their productivity.
+          involved in the development of various applications, which range from
+          product-based to project-based. My primary focus is on developing
+          project-based applications for government entities, with the aim of
+          enhancing their productivity.
           <ul className="list-disc pl-4 pt-6">
             <li>
-              Collaborated with a team of developers to design
-              and implement Android applications, ensuring
-              optimal performance and user experience
+              Collaborated with a team of developers to design and implement
+              Android applications, ensuring optimal performance and user
+              experience
             </li>
             <li className="pt-2">
-              Developed and maintained code for new features,
-              enhancements, and bug fixes in alignment with
-              project requirements
+              Developed and maintained code for new features, enhancements, and
+              bug fixes in alignment with project requirements
             </li>
             <li className="pt-2">
-              Worked closely with UX/UI designers to implement
-              visually appealing and intuitive interfaces
+              Worked closely with UX/UI designers to implement visually
+              appealing and intuitive interfaces
             </li>
             <li className="pt-2">
-              Stayed current with the latest Android development
-              trends and technologies, integrating them into
-              projects for continuous improvement.
+              Stayed current with the latest Android development trends and
+              technologies, integrating them into projects for continuous
+              improvement.
             </li>
           </ul>
         </>
@@ -103,19 +104,26 @@ export const RESUME_DATA = {
       end: null,
       description: (
         <>
-          As a freelance Android Developer, I work independently to design, develop, and maintain Android applications for various clients. I focus on building high-quality, user-friendly, and scalable mobile solutions tailored to clients needs.
+          As a freelance Android Developer, I work independently to design,
+          develop, and maintain Android applications for various clients. I
+          focus on building high-quality, user-friendly, and scalable mobile
+          solutions tailored to clients needs.
           <ul className="list-disc pl-4 pt-6">
             <li>
-              Designed and implemented Android applications, ensuring optimal performance and smooth user experience.
+              Designed and implemented Android applications, ensuring optimal
+              performance and smooth user experience.
             </li>
             <li className="pt-2">
-              Developed and maintained features, enhancements, and bug fixes based on project requirements.
+              Developed and maintained features, enhancements, and bug fixes
+              based on project requirements.
             </li>
             <li className="pt-2">
-              Worked closely with clients to understand their needs and translate them into functional mobile applications.
+              Worked closely with clients to understand their needs and
+              translate them into functional mobile applications.
             </li>
             <li className="pt-2">
-              Stayed up to date with the latest Android development trends and best practices to deliver cutting-edge solutions.
+              Stayed up to date with the latest Android development trends and
+              best practices to deliver cutting-edge solutions.
             </li>
           </ul>
         </>
@@ -124,13 +132,48 @@ export const RESUME_DATA = {
   ],
   skills: {
     programmingLanguages: ["Kotlin", "Java", "Dart", "JavaScript"],
-    mobile: ["Android Native", "Jetpack Compose", "KMP", "Flutter", "Android Jetpack", "XML", "CI/CD", "MVVM", "MVI", "MVP", "Clean Architecture", "Coroutines"],
-    toolbox: ["Android Studio", "Firebase", "Gradle", "Git", "Android SDK", "Jenkins", "Gitlab CI/CD", "VS Code", "Intellij IDEA", "Postman", "Figma", "Xcode"]
+    mobile: [
+      "Android Native",
+      "Jetpack Compose",
+      "KMP",
+      "Flutter",
+      "Android Jetpack",
+      "XML",
+      "CI/CD",
+      "MVVM",
+      "MVI",
+      "MVP",
+      "Clean Architecture",
+      "Coroutines",
+    ],
+    toolbox: [
+      "Android Studio",
+      "Firebase",
+      "Gradle",
+      "Git",
+      "Android SDK",
+      "Jenkins",
+      "Gitlab CI/CD",
+      "VS Code",
+      "Intellij IDEA",
+      "Postman",
+      "Figma",
+      "Xcode",
+    ],
   },
   projects: [
     {
       title: "JakLingko App",
-      techStack: ["Android Native", "Kotlin & Java", "Firebase", "NFC", "Room Database", "Google Maps SDK", "Coroutines", "MVVM"],
+      techStack: [
+        "Android Native",
+        "Kotlin & Java",
+        "Firebase",
+        "NFC",
+        "Room Database",
+        "Google Maps SDK",
+        "Coroutines",
+        "MVVM",
+      ],
       description:
         "Jak Lingko is a public transport integration program designed to integrate payment and physical connection between transport modes in Jakarta.",
       logo: MonitoLogo,
@@ -147,7 +190,7 @@ export const RESUME_DATA = {
         "RxJava",
         "MVP",
         "Firebase",
-        "MLKit"
+        "MLKit",
       ],
       description:
         "Kosmo Kominfo is a productivity companion app designed for\n" +
@@ -173,7 +216,16 @@ export const RESUME_DATA = {
     },
     {
       title: "Lerun",
-      techStack: ["Android Native", "Kotlin", "Firebase", "MVVM", "Room Database", "Coroutines", "Google Maps", "Dagger Hilt"],
+      techStack: [
+        "Android Native",
+        "Kotlin",
+        "Firebase",
+        "MVVM",
+        "Room Database",
+        "Coroutines",
+        "Google Maps",
+        "Dagger Hilt",
+      ],
       description:
         "Lerun is a running tracking application based on modern Android tech-stacks and MVVM architecture.",
       logo: MonitoLogo,
@@ -195,7 +247,14 @@ export const RESUME_DATA = {
     },
     {
       title: "Panic Button",
-      techStack: ["Android Native", "Kotlin", "Firebase", "MVI", "Google Maps", "Coroutines"],
+      techStack: [
+        "Android Native",
+        "Kotlin",
+        "Firebase",
+        "MVI",
+        "Google Maps",
+        "Coroutines",
+      ],
       description:
         "This app enables agents to quickly send emergency alerts or SOS messages, along with their current location, text, and video. It is designed to provide a swift and reliable way to communicate urgent situations, ensuring that help can be dispatched promptly.",
       logo: MonitoLogo,
