@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     images: [
       {
-        url: "/profile-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://i.ibb.co.com/NNWcLxd/meta-img-2.png"],
+    images: ["/opengraph-image.png"],
   },
   keywords: [
     "arrazy",

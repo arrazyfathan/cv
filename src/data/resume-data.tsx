@@ -24,7 +24,7 @@ export const RESUME_DATA = {
       of android development with Kotlin/Java.
     </>
   ),
-  avatarUrl: "https://i.ibb.co.com/BKPMMyjh/profil-small.jpg",
+  avatarUrl: "/profile-image.jpg",
   personalWebsiteUrl: "",
   contact: {
     email: "arrazy.rabbani266@gmail.com",
