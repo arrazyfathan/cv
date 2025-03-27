@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     images: [
       {
-        url: "https://i.ibb.co.com/NNWcLxd/meta-img-2.png",
+        url: "/profile-image.jpg",
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
