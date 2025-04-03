@@ -49,6 +49,11 @@ export const metadata: Metadata = {
     "ar razy fathan rabbani",
     "fathan",
     " ar razy fathan",
+    "razy",
+    "fathan",
+    "rabbani",
+    "arrazy",
+    "arrazy fathan rabbani",
   ],
 };
 

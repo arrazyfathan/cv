@@ -15,10 +15,10 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Yogyakarta",
   about: "Android Engineer",
   description:
-    "Ar Razy Fathan Rabbani – Android Engineer based in Yogyakarta, Indonesia 🇮🇩. With 2 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
+    "Ar Razy Fathan Rabbani – Android Engineer based in Yogyakarta, Indonesia 🇮🇩. With 3 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
   summary: (
     <>
-      Android Engineer with 2 years of experience in developing mobile
+      Android Engineer with 3 years of experience in developing mobile
       applications. Open to learn new things and up to any challenges. Able to
       work individually and team work. Proficient in various modern technologies
       of android development with Kotlin/Java.
