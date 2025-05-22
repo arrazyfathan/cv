@@ -131,11 +131,18 @@ export const RESUME_DATA = {
     },
   ],
   skills: {
-    programmingLanguages: ["Kotlin", "Java", "Dart", "JavaScript"],
+    programmingLanguages: [
+      "Kotlin",
+      "Java",
+      "Dart",
+      "JavaScript",
+      "TypeScript",
+    ],
     mobile: [
       "Android Native",
       "Jetpack Compose",
       "KMP",
+      "Compose Multiplatform",
       "Flutter",
       "Android Jetpack",
       "XML",
