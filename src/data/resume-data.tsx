@@ -6,7 +6,7 @@ import {
   NSNLogo,
   ParabolLogo,
 } from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Ar Razy Fathan Rabbani",
@@ -39,11 +39,6 @@ export const RESUME_DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/arrazyfathan/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/arrazyfathann",
-        icon: XIcon,
       },
     ],
   },
