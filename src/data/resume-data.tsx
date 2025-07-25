@@ -54,7 +54,7 @@ export const RESUME_DATA = {
     {
       company: "Gamatechno Indonesia",
       link: "https://www.gamatechno.com/",
-      badges: ["Hybrid", "Android", "Kotlin", "Java"],
+      badges: ["Hybrid", "Android", "Kotlin", "Java", "Flutter"],
       title: "Mobile Engineer",
       logo: ConsultlyLogo,
       start: "2022",
