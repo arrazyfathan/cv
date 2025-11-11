@@ -13,15 +13,16 @@ export const RESUME_DATA = {
   initials: "AFR",
   location: "Yogyakarta, Indonesia 🇮🇩",
   locationLink: "https://www.google.com/maps/place/Yogyakarta",
-  about: "Android Engineer",
+  about: "Mobile Engineer",
   description:
-    "Ar Razy Fathan Rabbani – Android Engineer based in Yogyakarta, Indonesia 🇮🇩. With 3 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
+    "Ar Razy Fathan Rabbani – Mobile Engineer based in Yogyakarta, Indonesia 🇮🇩. With 3 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
   summary: (
     <>
-      Android Engineer with 3 years of experience in developing mobile
+      Mobile Engineer with 3 years of experience in developing mobile
       applications. Open to learn new things and up to any challenges. Able to
       work individually and team work. Proficient in various modern technologies
-      of android development with Kotlin/Java.
+      of android development with Kotlin/Java and Multi-platform development
+      with Kotlin Multiplatform Mobile (KMP) and Flutter.
     </>
   ),
   avatarUrl: "/profile-image.jpg",
@@ -92,8 +93,8 @@ export const RESUME_DATA = {
     {
       company: "Freelance",
       link: "",
-      badges: ["Remote", "Android"],
-      title: "Android Developer",
+      badges: ["Remote", "Android", "Flutter"],
+      title: "Mobile Developer",
       logo: ConsultlyLogo,
       start: "2024",
       end: null,
@@ -161,6 +162,7 @@ export const RESUME_DATA = {
       "Postman",
       "Figma",
       "Xcode",
+      "Zed",
     ],
   },
   projects: [
@@ -263,6 +265,17 @@ export const RESUME_DATA = {
       link: {
         label: "Panic Button",
         href: "",
+      },
+    },
+    {
+      title: "HiiGeek",
+      techStack: ["Flutter", "Dart", "Firebase", "Bloc", "iOS", "Android"],
+      description:
+        "HiiGeek is the official app of GIK UGM, a Super Creative Hub that connects students, lecturers, industry professionals, artists, and public sectors in a vibrant ecosystem of innovation and creativity.",
+      logo: MonitoLogo,
+      link: {
+        label: "HiiGeek",
+        href: "https://play.google.com/store/apps/details?id=id.hiigeek&pcampaignid=web_share",
       },
     },
   ],
