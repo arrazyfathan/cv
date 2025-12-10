@@ -1,6 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import { RESUME_DATA } from "../data/resume-data";
+
+// Minimal data for OG image generation to avoid importing assets not needed in the edge runtime.
+const OG_RESUME_DATA = {
+  name: "Ar Razy Fathan Rabbani",
+  about:
+    "Mobile Engineer with 3 years of experience in Android and cross-platform development.",
+  avatarUrl: "/profile-image.jpg",
+  personalWebsiteUrl: "",
+  contact: {
+    email: "arrazy.rabbani266@gmail.com",
+  },
+};
 
 export const runtime = "edge";
 
@@ -36,8 +47,8 @@ export default async function Image() {
           }}
         >
           <img
-            src={RESUME_DATA.avatarUrl}
-            alt={RESUME_DATA.name}
+            src={OG_RESUME_DATA.avatarUrl}
+            alt={OG_RESUME_DATA.name}
             style={{
               width: "150px",
               height: "150px",
@@ -53,7 +64,7 @@ export default async function Image() {
               marginBottom: "1rem",
             }}
           >
-            {RESUME_DATA.name}
+            {OG_RESUME_DATA.name}
           </div>
           <div
             style={{
@@ -63,7 +74,7 @@ export default async function Image() {
               lineHeight: "1.4",
             }}
           >
-            {RESUME_DATA.about}
+            {OG_RESUME_DATA.about}
           </div>
           <div
             style={{
@@ -72,9 +83,9 @@ export default async function Image() {
               gap: "1rem",
             }}
           >
-            {RESUME_DATA.contact.email && (
+            {OG_RESUME_DATA.contact.email && (
               <div style={{ fontSize: "1rem", color: "#666" }}>
-                {RESUME_DATA.personalWebsiteUrl}
+                {OG_RESUME_DATA.personalWebsiteUrl}
               </div>
             )}
           </div>

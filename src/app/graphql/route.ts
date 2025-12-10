@@ -18,4 +18,18 @@ const apolloServer = new ApolloServer({
 const handler = startServerAndCreateNextHandler<NextRequest>(apolloServer, {
   context: async (req) => ({ req }),
 });
-export { handler as GET, handler as POST };
+
+// Next 16 route handlers expect the (request, context) signature, so wrap the Apollo handler.
+export async function GET(
+  request: NextRequest,
+  _context: { params: Promise<{}> }
+) {
+  return handler(request);
+}
+
+export async function POST(
+  request: NextRequest,
+  _context: { params: Promise<{}> }
+) {
+  return handler(request);
+}

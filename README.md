@@ -2,14 +2,14 @@
 
 # Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
 
-Simple web app that renders minimalist CV with print-friendly layout.
+Simple web app that renders a minimalist, print-friendly CV.
 
-Built with Next.js and shadcn/ui, deployed on Vercel.
+Built with Next.js 16, React, TypeScript, shadcn/ui, and Tailwind CSS. Deploy anywhere (Vercel ready).
 
 # Features
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Single config file to edit your data: [src/data/resume-data.tsx](./src/data/resume-data.tsx)
+- Next.js 16, React, TypeScript, shadcn/ui, Tailwind CSS
 - Auto generated Layout
 - Responsive for different devices
 - Optimized for Next.js and Vercel
@@ -34,13 +34,21 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
    yarn install
    ```
 
-4. Start the local Server:
+4. Start the local server:
 
    ```bash
    yarn dev
    ```
 
 5. Open the [Config file](./src/data/resume-data.tsx) and make changes
+
+6. Build for production:
+
+   ```bash
+   yarn build
+   ```
+
+   (build script uses the webpack bundler for compatibility with this setup)
 
 # Run with Docker
 
