@@ -6,14 +6,11 @@ const OG_RESUME_DATA = {
   name: "Ar Razy Fathan Rabbani",
   about:
     "Mobile Engineer with 3 years of experience in Android and cross-platform development.",
-  avatarUrl: "/profile-image.jpg",
   personalWebsiteUrl: "",
   contact: {
     email: "arrazy.rabbani266@gmail.com",
   },
 };
-
-export const runtime = "edge";
 
 export const alt = "Minimalist Resume";
 export const size = {
@@ -46,16 +43,23 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          <img
-            src={OG_RESUME_DATA.avatarUrl}
-            alt={OG_RESUME_DATA.name}
+          <div
             style={{
               width: "150px",
               height: "150px",
               borderRadius: "10%",
               marginBottom: "2rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#f4f4f5",
+              color: "#111827",
+              fontSize: "3rem",
+              fontWeight: "bold",
             }}
-          />
+          >
+            AR
+          </div>
           <div
             style={{
               fontSize: "3rem",
