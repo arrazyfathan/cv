@@ -28,7 +28,7 @@ export const RESUME_DATA = {
   avatarUrl: "/profile-image.jpg",
   personalWebsiteUrl: "",
   contact: {
-    email: "arrazy.rabbani266@gmail.com",
+    email: "hello@arrazyfathan.com",
     tel: null,
     social: [
       {
