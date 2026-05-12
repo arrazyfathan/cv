@@ -18,7 +18,7 @@ export const RESUME_DATA = {
     "Ar Razy Fathan Rabbani – Mobile Engineer based in Yogyakarta, Indonesia 🇮🇩. With 3 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
   summary: (
     <>
-      Mobile Engineer with $ years of experience in developing mobile
+      Mobile Engineer with 4 years of experience in developing mobile
       applications. Open to learn new things and up to any challenges. Able to
       work individually and team work. Proficient in various modern technologies
       of android development with Kotlin/Java and Multi-platform development
@@ -55,7 +55,7 @@ export const RESUME_DATA = {
     {
       company: "Gamatechno Indonesia",
       link: "https://www.gamatechno.com/",
-      badges: ["Hybrid", "Android", "Kotlin", "Java", "Flutter"],
+      badges: ["Remote", "Android", "Kotlin", "Java", "Flutter"],
       title: "Mobile Engineer",
       logo: ConsultlyLogo,
       start: "2022",
