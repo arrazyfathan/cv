@@ -158,10 +158,10 @@
   resolved "https://registry.yarnpkg.com/@apollo/utils.withrequired/-/utils.withrequired-2.0.1.tgz#e72bc512582a6f26af150439f7eb7473b46ba874"
   integrity sha512-YBDiuAX9i1lLc6GeTy1m7DGLFn/gMnvXqlalOIMjM7DeOgIacEjjfwPqb0M1CQ2v11HhR15d1NmxJoRCfrNqcA==
 
-"@as-integrations/next@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@as-integrations/next/-/next-3.0.0.tgz#868d45da046164a97c4e267abdf6a4b76b9f87ff"
-  integrity sha512-FmqJjoH5XamyBZQVTnnG9ssE3ywf/TPIanFGwYjp3YFsX92F1lY7FDcrQJa/gCJQnb8gSZAdqAIgrWo4K325sA==
+"@as-integrations/next@^4.0.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@as-integrations/next/-/next-4.1.0.tgz#5e30341a83858b3deaf89ce50ab49d90b70d2bb7"
+  integrity sha512-QZ+bGlLn1ahYpVt60CofkgJUB0XhG6JghkoCywCnzueQM9qoQct0WPGMNZuWXyfBxXJGCbeF/tsIlATlHT1HoQ==
 
 "@ast-grep/napi-darwin-arm64@0.40.5":
   version "0.40.5"
