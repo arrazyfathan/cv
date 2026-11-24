@@ -1,27 +1,29 @@
 import { RESUME_DATA } from "@/data/resume-data";
-import { Section } from "../../components/ui/section";
+import { Section } from "@/components/ui/section";
 
-interface AboutProps {
+interface SummaryProps {
   summary: typeof RESUME_DATA.summary;
   className?: string;
 }
 
-/**
- * Summary section component
- * Displays a summary of professional experience and goals
- */
-export function Summary({ summary, className }: AboutProps) {
+export function Summary({ summary, className }: SummaryProps) {
   return (
-    <Section className={className}>
-      <h2 className="text-xl font-bold" id="about-section">
-        About
+    <Section
+      className={className}
+      style={{ animationDelay: "50ms" }}
+    >
+      <h2
+        className="font-serif text-[16px] font-normal italic text-[var(--muted)] print:text-[12.5px]"
+        id="about-section"
+      >
+        Summary
       </h2>
-      <div
-        className="text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
+      <p
+        className="text-justify text-[15px] leading-[1.72] text-[var(--ink-2)] print:text-[11px] print:leading-[1.55]"
         aria-labelledby="about-section"
       >
         {summary}
-      </div>
+      </p>
     </Section>
   );
 }

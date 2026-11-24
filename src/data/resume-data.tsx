@@ -1,43 +1,33 @@
-import {
-  ClevertechLogo,
-  ConsultlyLogo,
-  JojoMobileLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-} from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Ar Razy Fathan Rabbani",
-  initials: "AFR",
-  location: "Yogyakarta, Indonesia 🇮🇩",
-  locationLink: "https://www.google.com/maps/place/Yogyakarta",
-  about: "Mobile Engineer",
+  initials: "AR",
+  location: "Surakarta, Indonesia",
+  locationLink: "https://www.google.com/maps/place/Surakarta",
+  about: "Mobile Engineer · Android & iOS",
+  availability: "Open for mobile engineering roles & collaborations",
   description:
-    "Ar Razy Fathan Rabbani – Mobile Engineer based in Yogyakarta, Indonesia 🇮🇩. With 3 years of experience in mobile app development, proficient in Kotlin/Java, and always open to learning new technologies. Skilled in both individual and team collaboration.",
-  summary: (
-    <>
-      Mobile Engineer with 4 years of experience in developing mobile
-      applications. Open to learn new things and up to any challenges. Able to
-      work individually and team work. Proficient in various modern technologies
-      of android development with Kotlin/Java and Multi-platform development
-      with Kotlin Multiplatform Mobile (KMP) and Flutter.
-    </>
-  ),
+    "Mobile Engineer in Surakarta, Indonesia — 4+ years shipping Android and iOS apps with Kotlin, Jetpack Compose, Flutter, and KMP.",
+  ogDescription:
+    "Resume of Ar Razy Fathan Rabbani — Mobile Engineer shipping Android & iOS apps with Kotlin, Compose, and Flutter.",
+  summary:
+    "Mobile Engineer with 4+ years of experience building and shipping reliable applications for Android and iOS. Proficient in modern native Android development with Kotlin, Java, and Jetpack Compose, as well as cross-platform development with Kotlin Multiplatform (KMP) and Flutter. Comfortable owning end-to-end features independently or collaborating closely with designers and backend teams.",
   avatarUrl: "/profile-image.jpg",
-  personalWebsiteUrl: "",
+  personalWebsiteUrl: "https://arrazyfathan.com",
   contact: {
     email: "hello@arrazyfathan.com",
     tel: null,
     social: [
       {
         name: "GitHub",
+        handle: "arrazyfathan",
         url: "https://github.com/arrazyfathan",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
+        handle: "in/arrazyfathan",
         url: "https://www.linkedin.com/in/arrazyfathan/",
         icon: LinkedInIcon,
       },
@@ -47,83 +37,44 @@ export const RESUME_DATA = {
     {
       school: "Universitas Islam Indonesia",
       degree: "Bachelor's Degree in Computer Science",
+      gpa: "3.68 / 4.00",
       start: "2017",
-      end: "2021 (GPA: 3.68)",
+      end: "2021",
     },
   ],
   work: [
     {
       company: "Gamatechno Indonesia",
       link: "https://www.gamatechno.com/",
-      badges: ["Remote", "Android", "Kotlin", "Java", "Flutter"],
+      location: "Remote",
+      badges: ["Android", "Kotlin", "Java", "Flutter"],
       title: "Mobile Engineer",
-      logo: ConsultlyLogo,
       start: "2022",
       end: null,
-      description: (
-        <>
-          I work as an Android Engineer in the Digital Solutions division. I am
-          involved in the development of various applications, which range from
-          product-based to project-based. My primary focus is on developing
-          project-based applications for government entities, with the aim of
-          enhancing their productivity.
-          <ul className="list-disc pl-4 pt-6">
-            <li>
-              Collaborated with a team of developers to design and implement
-              Android applications, ensuring optimal performance and user
-              experience
-            </li>
-            <li className="pt-2">
-              Developed and maintained code for new features, enhancements, and
-              bug fixes in alignment with project requirements
-            </li>
-            <li className="pt-2">
-              Worked closely with UX/UI designers to implement visually
-              appealing and intuitive interfaces
-            </li>
-            <li className="pt-2">
-              Stayed current with the latest Android development trends and
-              technologies, integrating them into projects for continuous
-              improvement.
-            </li>
-          </ul>
-        </>
-      ),
+      description:
+        "Android Engineer in the Digital Solutions division, building product-based and project-based mobile applications — with a primary focus on public-sector and enterprise apps that improve operational productivity.",
+      highlights: [
+        "Collaborated with cross-functional engineering teams to architect and ship Android applications focused on smooth performance and reliable user experience.",
+        "Developed and maintained new features, architectural enhancements, and production bug fixes aligned with evolving product requirements.",
+        "Partnered closely with UI/UX designers to translate complex workflows into clean, intuitive mobile interfaces.",
+        "Evaluated and adopted modern Android tooling and architectural patterns across ongoing client and internal projects.",
+      ],
     },
     {
       company: "Freelance",
       link: "",
-      badges: ["Remote", "Android", "Flutter"],
+      location: "Remote",
+      badges: ["Android", "Flutter", "iOS"],
       title: "Mobile Developer",
-      logo: ConsultlyLogo,
       start: "2024",
       end: null,
-      description: (
-        <>
-          As a freelance Android Developer, I work independently to design,
-          develop, and maintain Android applications for various clients. I
-          focus on building high-quality, user-friendly, and scalable mobile
-          solutions tailored to clients needs.
-          <ul className="list-disc pl-4 pt-6">
-            <li>
-              Designed and implemented Android applications, ensuring optimal
-              performance and smooth user experience.
-            </li>
-            <li className="pt-2">
-              Developed and maintained features, enhancements, and bug fixes
-              based on project requirements.
-            </li>
-            <li className="pt-2">
-              Worked closely with clients to understand their needs and
-              translate them into functional mobile applications.
-            </li>
-            <li className="pt-2">
-              Stayed up to date with the latest Android development trends and
-              best practices to deliver cutting-edge solutions.
-            </li>
-          </ul>
-        </>
-      ),
+      description:
+        "Independent mobile engineer partnering directly with clients to design, build, and maintain scalable Android and cross-platform applications tailored to business goals.",
+      highlights: [
+        "Designed and implemented end-to-end mobile applications with attention to runtime performance, offline resilience, and polish.",
+        "Delivered iterative features, enhancements, and ongoing maintenance directly against client milestones.",
+        "Worked closely with stakeholders to turn open-ended requirements into shippable mobile products.",
+      ],
     },
   ],
   skills: {
@@ -131,38 +82,37 @@ export const RESUME_DATA = {
       "Kotlin",
       "Java",
       "Dart",
-      "JavaScript",
       "TypeScript",
+      "JavaScript",
     ],
     mobile: [
       "Android Native",
       "Jetpack Compose",
-      "KMP",
+      "Kotlin Multiplatform (KMP)",
       "Compose Multiplatform",
       "Flutter",
       "Android Jetpack",
       "XML",
-      "CI/CD",
+      "Coroutines",
+      "Clean Architecture",
       "MVVM",
       "MVI",
       "MVP",
-      "Clean Architecture",
-      "Coroutines",
+      "CI/CD",
     ],
     toolbox: [
       "Android Studio",
+      "IntelliJ IDEA",
+      "Xcode",
+      "VS Code",
+      "Zed",
       "Firebase",
       "Gradle",
       "Git",
-      "Android SDK",
+      "GitLab CI/CD",
       "Jenkins",
-      "Gitlab CI/CD",
-      "VS Code",
-      "Intellij IDEA",
       "Postman",
       "Figma",
-      "Xcode",
-      "Zed",
     ],
   },
   projects: [
@@ -171,19 +121,28 @@ export const RESUME_DATA = {
       techStack: [
         "Android Native",
         "Kotlin & Java",
-        "Firebase",
         "NFC",
-        "Room Database",
         "Google Maps SDK",
+        "Room",
         "Coroutines",
+        "Firebase",
         "MVVM",
       ],
       description:
-        "Jak Lingko is a public transport integration program designed to integrate payment and physical connection between transport modes in Jakarta.",
-      logo: MonitoLogo,
+        "Public transport integration app unifying ticketing, NFC card payments, and multi-modal transit routes across Jakarta.",
       link: {
-        label: "JakLingko",
+        label: "Play Store",
         href: "https://play.google.com/store/apps/details?id=com.jaklingkoindonesia.app&pcampaignid=web_share",
+      },
+    },
+    {
+      title: "HiiGeek",
+      techStack: ["Flutter", "Dart", "Bloc", "Firebase", "Android", "iOS"],
+      description:
+        "Official mobile app for GIK UGM — a creative hub connecting students, lecturers, industry professionals, artists, and public sectors.",
+      link: {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=id.hiigeek&pcampaignid=web_share",
       },
     },
     {
@@ -192,30 +151,15 @@ export const RESUME_DATA = {
         "Android Native",
         "Kotlin",
         "RxJava",
-        "MVP",
+        "ML Kit",
         "Firebase",
-        "MLKit",
+        "MVP",
       ],
       description:
-        "Kosmo Kominfo is a productivity companion app designed for\n" +
-        "the members of the Ministry of Communication and\n" +
-        "Informatics.",
-      logo: ConsultlyLogo,
+        "Productivity companion app built for members of Indonesia's Ministry of Communication and Informatics.",
       link: {
-        label: "Kosmo Komdigi",
+        label: "Play Store",
         href: "https://play.google.com/store/apps/details?id=com.kosmokominfo&pcampaignid=web_share",
-      },
-    },
-    {
-      title: "Notes Agent ( Voice to Text )",
-      techStack: ["Android Native", "Kotlin", "Firebase", "MVI"],
-      description:
-        "This app assists agents in creating notes using voice-to-text technology, allowing\n" +
-        "them to transcribe their thoughts either in real time or from recordings.",
-      logo: MonitoLogo,
-      link: {
-        label: "Notes Agent",
-        href: "",
       },
     },
     {
@@ -223,30 +167,18 @@ export const RESUME_DATA = {
       techStack: [
         "Android Native",
         "Kotlin",
-        "Firebase",
-        "MVVM",
-        "Room Database",
-        "Coroutines",
         "Google Maps",
         "Dagger Hilt",
+        "Room",
+        "Coroutines",
+        "Firebase",
+        "MVVM",
       ],
       description:
-        "Lerun is a running tracking application based on modern Android tech-stacks and MVVM architecture.",
-      logo: MonitoLogo,
+        "Open-source running tracker built with modern Android architecture, live route mapping, and offline run history.",
       link: {
-        label: "Lerun",
+        label: "GitHub",
         href: "https://github.com/arrazyfathan/Lerun",
-      },
-    },
-    {
-      title: "BeVoucher - Berau Coal HSE Automation",
-      techStack: ["Android Native", "Java", "Firebase", "MVP", "Room Database"],
-      description:
-        "Implemented a voucher system that enhances user experience by offering additional benefits and rewards, driving user engagement and loyalty within the app.",
-      logo: MonitoLogo,
-      link: {
-        label: "BeVoucher",
-        href: "",
       },
     },
     {
@@ -254,28 +186,36 @@ export const RESUME_DATA = {
       techStack: [
         "Android Native",
         "Kotlin",
-        "Firebase",
-        "MVI",
         "Google Maps",
         "Coroutines",
+        "Firebase",
+        "MVI",
       ],
       description:
-        "This app enables agents to quickly send emergency alerts or SOS messages, along with their current location, text, and video. It is designed to provide a swift and reliable way to communicate urgent situations, ensuring that help can be dispatched promptly.",
-      logo: MonitoLogo,
+        "Emergency response app enabling field agents to dispatch instant SOS alerts with live GPS coordinates, text, and video.",
       link: {
-        label: "Panic Button",
+        label: "Internal",
         href: "",
       },
     },
     {
-      title: "HiiGeek",
-      techStack: ["Flutter", "Dart", "Firebase", "Bloc", "iOS", "Android"],
+      title: "Notes Agent (Voice to Text)",
+      techStack: ["Android Native", "Kotlin", "Firebase", "MVI"],
       description:
-        "HiiGeek is the official app of GIK UGM, a Super Creative Hub that connects students, lecturers, industry professionals, artists, and public sectors in a vibrant ecosystem of innovation and creativity.",
-      logo: MonitoLogo,
+        "Voice-to-text field note companion allowing agents to capture and transcribe observations in real time or from recordings.",
       link: {
-        label: "HiiGeek",
-        href: "https://play.google.com/store/apps/details?id=id.hiigeek&pcampaignid=web_share",
+        label: "Internal",
+        href: "",
+      },
+    },
+    {
+      title: "BeVoucher — Berau Coal HSE Automation",
+      techStack: ["Android Native", "Java", "Room", "Firebase", "MVP"],
+      description:
+        "Rewards and voucher module for Berau Coal's HSE automation suite to encourage safety reporting and employee engagement.",
+      link: {
+        label: "Internal",
+        href: "",
       },
     },
   ],

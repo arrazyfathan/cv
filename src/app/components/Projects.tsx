@@ -1,116 +1,74 @@
-import { Badge } from "../../components/ui/badge";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "../../components/ui/card";
-import { Section } from "../../components/ui/section";
-import { RESUME_DATA } from "../../data/resume-data";
+import { ArrowUpRight } from "lucide-react";
+import { Section } from "@/components/ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
 
-type ProjectTags = readonly string[];
+type ProjectItem = (typeof RESUME_DATA)["projects"][number];
 
-interface ProjectLinkProps {
-  title: string;
-  link?: string;
-}
-
-/**
- * Renders project title with optional link and status indicator
- */
-function ProjectLink({ title, link }: ProjectLinkProps) {
-  if (!link) {
-    return <span>{title}</span>;
-  }
+function ProjectRow({ project }: { project: ProjectItem }) {
+  const href = project.link?.href;
+  const label = project.link?.label;
 
   return (
-    <>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
-        aria-label={`${title} project (opens in new tab)`}
-      >
-        {title}
-        <span
-          className="size-1 rounded-full bg-green-500"
-          aria-label="Active project indicator"
-        />
-      </a>
-      <div
-        className="hidden font-mono text-xs underline print:visible"
-        aria-hidden="true"
-      >
-        {link.replace("https://", "").replace("www.", "").replace("/", "")}
+    <article className="cv-avoid-break border-b border-[var(--line)] py-4 first:pt-0 last:border-b-0 last:pb-0 print:py-2.5">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="font-display text-[17px] font-bold tracking-[-0.01em] text-[var(--ink)] print:text-[12.5px]">
+          {href ? (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1 transition-colors hover:text-[var(--accent)]"
+              aria-label={`${project.title} (${label})`}
+            >
+              <span>{project.title}</span>
+              <ArrowUpRight
+                className="size-3.5 text-[var(--quiet)] transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--accent)] print:hidden"
+                aria-hidden="true"
+              />
+            </a>
+          ) : (
+            <span>{project.title}</span>
+          )}
+        </h3>
+
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[11.5px] text-[var(--muted)] transition-colors hover:text-[var(--accent)] print:text-[9.5px]"
+          >
+            {label}
+          </a>
+        ) : (
+          label && (
+            <span className="font-mono text-[11px] text-[var(--quiet)] print:text-[9.5px]">
+              {label}
+            </span>
+          )
+        )}
       </div>
-    </>
-  );
-}
 
-interface ProjectTagsProps {
-  tags: ProjectTags;
-}
+      <p className="mt-1.5 text-pretty text-[14px] leading-[1.62] text-[var(--ink-2)] print:mt-0.5 print:text-[10.5px] print:leading-[1.45]">
+        {project.description}
+      </p>
 
-/**
- * Renders a list of technology tags used in the project
- */
-function ProjectTags({ tags }: ProjectTagsProps) {
-  if (tags.length === 0) return null;
-
-  return (
-    <ul
-      className="mt-2 flex list-none flex-wrap gap-1 p-0"
-      aria-label="Technologies used"
-    >
-      {tags.map((tag) => (
-        <li key={tag}>
-          <Badge
-            className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
-            variant="secondary"
-          >
-            {tag}
-          </Badge>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tags: ProjectTags;
-  link?: string;
-}
-
-/**
- * Card component displaying project information
- */
-function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
-  return (
-    <Card
-      className="flex h-full flex-col overflow-hidden border p-3"
-      role="article"
-    >
-      <CardHeader>
-        <div className="space-y-1">
-          <CardTitle className="text-base">
-            <ProjectLink title={title} link={link} />
-          </CardTitle>
-          <CardDescription
-            className="text-pretty font-mono text-xs print:text-[10px]"
-            aria-label="Project description"
-          >
-            {description}
-          </CardDescription>
-        </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex">
-        <ProjectTags tags={tags} />
-      </CardContent>
-    </Card>
+      {project.techStack.length > 0 && (
+        <ul
+          className="mt-2.5 flex flex-wrap gap-1.5 print:mt-1.5"
+          aria-label="Technologies used"
+        >
+          {project.techStack.map((tag) => (
+            <li
+              key={tag}
+              className="rounded-md border border-[var(--line)] bg-[var(--sunken)] px-2 py-0.5 font-mono text-[11px] text-[var(--muted)] print:px-1.5 print:py-0 print:text-[8.5px]"
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
+    </article>
   );
 }
 
@@ -118,32 +76,18 @@ interface ProjectsProps {
   projects: (typeof RESUME_DATA)["projects"];
 }
 
-/**
- * Section component displaying all side projects
- */
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <Section className="print-force-new-page scroll-mb-16 print:space-y-4 print:pt-12">
-      <h2 className="text-xl font-bold" id="side-projects">
-        Projects
-      </h2>
-      <div
-        className="grid grid-cols-1 gap-4 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
-        role="feed"
-        aria-labelledby="side-projects"
+    <Section style={{ animationDelay: "150ms" }}>
+      <h2
+        className="font-serif text-[16px] font-normal italic text-[var(--muted)] print:text-[12.5px]"
+        id="selected-projects"
       >
+        Selected Projects
+      </h2>
+      <div aria-labelledby="selected-projects">
         {projects.map((project) => (
-          <article
-            key={project.title}
-            className="h-full" // Added h-full here
-          >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              tags={project.techStack}
-              link={"link" in project ? project.link.href : undefined}
-            />
-          </article>
+          <ProjectRow key={project.title} project={project} />
         ))}
       </div>
     </Section>

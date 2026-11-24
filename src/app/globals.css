@@ -4,77 +4,221 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    /* Shared arrazyfathan.com palette — Warm Archival Paper (Light) */
+    --bg: #FBFAF7;
+    --surface: #FFFFFF;
+    --sunken: #F2F0EA;
+    --ink: #17150F;
+    --ink-2: #524E46;
+    --muted: #7C776D;
+    --quiet: #9C968B;
+    --line: rgba(23, 21, 15, 0.09);
+    --line-strong: rgba(23, 21, 15, 0.16);
+    --accent: #0380FC;
+    --accent-soft: rgba(3, 128, 252, 0.09);
+    --ok: #1F8A4C;
 
+    /* Motion */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Shadcn / Radix compatibility tokens mapped to warm paper */
+    --background: 45 33% 98%;
+    --foreground: 45 21% 7%;
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-
+    --card-foreground: 45 21% 7%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
-
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 45 21% 7%;
+    --primary: 45 21% 7%;
+    --primary-foreground: 45 33% 98%;
+    --secondary: 45 20% 93%;
+    --secondary-foreground: 45 14% 28%;
+    --muted-bg: 45 20% 93%;
+    --muted-foreground: 40 7% 46%;
+    --accent-bg: 45 20% 93%;
+    --accent-foreground: 45 21% 7%;
+    --destructive: 0 74% 52%;
+    --destructive-foreground: 45 33% 98%;
+    --border: 42 14% 88%;
+    --input: 42 14% 88%;
+    --ring: 210 98% 50%;
+    --radius: 0.625rem;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+    /* Shared arrazyfathan.com palette — Warm Charcoal Paper (Dark) */
+    --bg: #14120E;
+    --surface: #1D1B16;
+    --sunken: #24211B;
+    --ink: #F4EFE4;
+    --ink-2: #C7C1B5;
+    --muted: #938D81;
+    --quiet: #6E695F;
+    --line: rgba(244, 239, 228, 0.10);
+    --line-strong: rgba(244, 239, 228, 0.18);
+    --accent: #1A8CFF;
+    --accent-soft: rgba(26, 140, 255, 0.14);
+    --ok: #2EB567;
 
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
-
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    --background: 40 18% 7%;
+    --foreground: 41 42% 93%;
+    --card: 43 14% 10%;
+    --card-foreground: 41 42% 93%;
+    --popover: 43 14% 10%;
+    --popover-foreground: 41 42% 93%;
+    --primary: 41 42% 93%;
+    --primary-foreground: 40 18% 7%;
+    --secondary: 40 14% 12%;
+    --secondary-foreground: 40 15% 75%;
+    --muted-bg: 40 14% 12%;
+    --muted-foreground: 40 8% 54%;
+    --accent-bg: 40 14% 14%;
+    --accent-foreground: 41 42% 93%;
+    --border: 40 10% 18%;
+    --input: 40 10% 18%;
+    --ring: 210 100% 55%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: var(--ink);
+  }
+
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--bg);
+    color: var(--ink);
+    transition: background-color 220ms var(--ease-out), color 220ms var(--ease-out);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 6px;
   }
 }
 
-.print-force-new-page {
-  page-break-before: always;
+/* Tactile button press feedback */
+.cv-press {
+  transition: transform 150ms var(--ease-out), background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.cv-press:active {
+  transform: scale(0.97);
+}
+
+/* Pulsing green availability dot (matches arrazyfathan.com) */
+@keyframes cv-status-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.cv-status-dot {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background-color: var(--ok);
+  flex-shrink: 0;
+}
+
+.cv-status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background-color: var(--ok);
+  animation: cv-status-pulse 2.2s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+/* Subtle section entrance stagger */
+@keyframes cv-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cv-stagger {
+  animation: cv-enter 320ms var(--ease-out) both;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cv-status-dot::after {
+    animation: none;
+  }
+  .cv-stagger {
+    animation: none;
+  }
+  body {
+    transition: none;
+  }
+}
+
+/* Crisp Print / Save-as-PDF Styling */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 15mm;
+  }
+
+  html,
+  body,
+  html.dark,
+  html.dark body {
+    background: #ffffff !important;
+    color: #17150f !important;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --sunken: #f5f4f0;
+    --ink: #17150f;
+    --ink-2: #3d3a33;
+    --muted: #666158;
+    --quiet: #7c776d;
+    --line: rgba(23, 21, 15, 0.12);
+    --line-strong: rgba(23, 21, 15, 0.22);
+    --accent: #0380fc;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-stagger {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .cv-status-dot::after {
+    animation: none !important;
+    display: none !important;
+  }
+
+  .cv-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
